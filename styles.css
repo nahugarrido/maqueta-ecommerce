@@ -24,16 +24,39 @@ header {
 }
 
 /* news antes de navbar */
+#new-carrousel {
+  z-index: 999999;
+  display: block;
+  top: 0;
+  width: 100%;
+  height: 20px;
+  padding-bottom: 40px;
+}
+
 .carousel-item {
-  background-color: rgb(22, 22, 22) !important;
+  background-color: #fff !important;
   text-align: center;
-  color: #fff;
+  color: #000;
 }
 
 /* navbar */
 .navigation-bar {
   display: flex;
+  position: relative;
+  top: 0;
   justify-content: space-between;
+  background-color: #fff;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.sticky {
+  top: 0;
+  z-index: 5000;
+  position: fixed;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  transition: top 0.5s ease;
 }
 
 .logo-container {
@@ -85,18 +108,25 @@ nav ul a:hover {
 .banner-grid {
   background-color: white;
   margin: 0px 0px 0px 0px;
-  padding: 8px 4px 0px 4px;
+  padding: 1% 2% 0px 2%;
 }
 
 .image-container {
   display: flex;
   align-items: center;
+  justify-content: center;
   width: 100%;
-  height: 350px;
+  height: auto;
   /* max-height: 350px; */
-  background-color: antiquewhite;
+  background-color: #f0eeed;
+  overflow: hidden;
 }
 
+.image-inside-2 {
+  position: flex;
+  width: 100%;
+  height: 100%;
+}
 .image-inside {
   max-width: 100%;
   max-height: 100%;
@@ -137,4 +167,12 @@ nav ul a:hover {
 
 .text-inform {
   width: 200px;
+}
+
+/* seccion inform-2 */
+
+.inform-2 {
+  width: 100%;
+  height: auto;
+  margin: 2% 0px 1% 0px;
 }
