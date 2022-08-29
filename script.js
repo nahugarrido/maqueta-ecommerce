@@ -5,7 +5,7 @@ window.addEventListener("scroll", () => {
   const banner_carrousel = document.getElementById("carousel-slider");
   const scrolled = window.scrollY;
   console.log(scrolled);
-  if (scrolled < 40) {
+  if (scrolled < 100) {
     navbar.classList.remove("sticky");
     carrousel.style.display = "block";
     banner_carrousel.style.marginTop = "0px";

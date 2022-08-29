@@ -48,15 +48,25 @@ header {
   background-color: #fff;
   padding-top: 30px;
   padding-bottom: 30px;
+  width: 100%;
 }
 
 .sticky {
   top: 0;
   z-index: 5000;
   position: fixed;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  transition: top 0.5s ease;
+  height: 65px;
+  animation: smoothScroll .4s none;
+}
+
+@keyframes smoothScroll {
+  from {
+  top: -100%;
+  }
+
+  to {
+      top: 0;
+  }
 }
 
 .logo-container {
