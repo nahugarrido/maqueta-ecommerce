@@ -10,6 +10,9 @@ html {
   padding: 0;
   font-size: 62.5%;
   font-family: "Lato", sans-serif;
+  /* Setea un minimo de tamaño y de esta forma los iconos de la navbar no colapsan al usar pantallas pequeñas */
+  min-width: 370px;
+  width: auto;
 }
 
 body {
@@ -23,7 +26,12 @@ header {
   border-bottom: 1px solid rgb(207, 207, 207);
 }
 
+h3 {
+  font-size: 1.75rem;
+}
+
 /* news antes de navbar */
+
 #new-carrousel {
   z-index: 999999;
   display: block;
@@ -56,16 +64,16 @@ header {
   z-index: 5000;
   position: fixed;
   height: 65px;
-  animation: smoothScroll .4s none;
+  animation: smoothScroll 0.4s ease;
 }
 
 @keyframes smoothScroll {
   from {
-  top: -100%;
+    top: -100%;
   }
 
   to {
-      top: 0;
+    top: 0;
   }
 }
 
@@ -149,13 +157,50 @@ nav ul a:hover {
 
 /* seccion informativa */
 
+@media screen and (max-width: 1240px) {
+  .ci-1 {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 972px) {
+  .ci-4 {
+    display: none !important;
+  }
+
+  .inform {
+    height: 15vh !important;
+    justify-content: space-evenly !important;
+  }
+}
+
+@media screen and (max-width: 699px) {
+  .ci-2 {
+    display: none !important;
+  }
+
+  .text-inform {
+    width: 240px !important;
+    margin: 0px 0px 0px 20px !important;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .inform {
+    margin: 1% 2% 1% 2% !important;
+  }
+}
+
+/* .ci-4 {
+  display: none !important;
+} */
+
 .inform {
   background-color: #f0eeed;
   margin: 1% 0px 1% 0px;
   display: flex;
   align-items: center;
-  height: 200px;
-  display: flex;
+  height: 30vh;
   justify-content: center;
 }
 
@@ -172,11 +217,12 @@ nav ul a:hover {
   border: 3px solid #000;
   font-size: 2.5em;
   text-align: center;
-  margin: 0px 20px 0px 20px;
+  margin: 0px;
 }
 
 .text-inform {
   width: 200px;
+  margin: 0px 20px 0px 20px;
 }
 
 /* seccion inform-2 */
