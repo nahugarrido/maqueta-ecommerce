@@ -19,6 +19,24 @@
     <title>Garrido's store</title>
   </head>
   <body>
+    <!-- off-canvas busqueda -->
+    <div class="offcanvas offcanvas-top" data-bs-backdrop="offcanvas" tabindex="-1" id="search-offcanvas" aria-labelledby="staticBackdropLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="staticBackdropLabel">Búsqueda</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+      </div>
+    </div>
+        <!-- off-canvas usuario -->
+        <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="user-offcanvas" aria-labelledby="staticBackdropLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="staticBackdropLabel">Usuario</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+          </div>
+        </div>
     <!-- carrusel header -->
 <div id="new-carrousel" class="carousel slide" data-bs-ride="carousel">
 <div class="carousel-inner">
@@ -53,10 +71,21 @@
       </nav>
   </div>
       <div class="icons-grid">
-        
-        <a><i class="bi bi-search"></i></a>
-        <a href="#"><i class="bi bi-heart"></i></a>
-        <!-- <a href="#"><i class="bi bi-person-fill"></i></a> -->
+        <a><i type="button" data-bs-toggle="offcanvas" data-bs-target="#search-offcanvas" class="bi bi-search"></i></a>
+  <!-- dropdown favoritos -->
+<div class="btn-group dropdown-center">
+  <a type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-heart heart-margin"></i></a>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="#">Item 1</a></li>
+    <li><a class="dropdown-item" href="#">Item 2</a></li>
+    <li><a class="dropdown-item" href="#">Item 3</a></li>
+    <li><a class="dropdown-item" href="#">Item 4</a></li>
+    <li><a class="dropdown-item" href="#">Item 5</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><a class="dropdown-item" href="#">Item 10</a></li>
+  </ul>
+</div>
+        <a><i type="button" data-bs-toggle="offcanvas" data-bs-target="#user-offcanvas" class="bi bi-person icon-size"></i></a>
         <a href="#"><i class="bi bi-bag"></i></a>
       </div>
     </header>
@@ -182,18 +211,21 @@
       <div class="row">
         <div class="col-12 col-sm-4 banner-grid">
           <a class="image-container" href=""
-            ><img class="image-inside-2" src="./assets/woman.png" alt=""
-          /></a>
+            ><img class="image-inside-2" src="./assets/woman.png" alt=""/>
+            <div class="image-overlay-custom"></div>
+        </a>
         </div>
         <div class="col-12 col-sm-4 banner-grid">
           <a class="image-container" href=""
-            ><img class="image-inside" src="assets/kids.png" alt=""
-          /></a>
+            ><img class="image-inside" src="assets/kids.png" alt=""/>
+          <div class="image-overlay-custom"></div>
+        </a>
         </div>
         <div class="col-12 col-sm-4 banner-grid">
           <a class="image-container" href=""
-            ><img class="image-inside" src="assets/formato_nuevo2.png" alt=""
-          /></a>
+            ><img class="image-inside" src="assets/formato_nuevo2.png" alt=""/>
+            <div class="image-overlay-custom"></div>
+        </a>
         </div>
       </div>
       <!-- sección inform-2 -->

@@ -30,10 +30,20 @@ h3 {
   font-size: 1.75rem;
 }
 
+/* user offcanvas */
+#user-offcanvas {
+  z-index: 1501;
+}
+
+/* search offcanvas */
+#search-offcanvas {
+  z-index: 1500;
+}
+
 /* news antes de navbar */
 
 #new-carrousel {
-  z-index: 999999;
+  z-index: 1055;
   display: block;
   top: 0;
   width: 100%;
@@ -61,7 +71,7 @@ h3 {
 
 .sticky {
   top: 0;
-  z-index: 5000;
+  z-index: 1050;
   position: fixed;
   height: 65px;
   animation: smoothScroll 0.4s ease;
@@ -107,14 +117,22 @@ nav ul a:hover {
   margin-right: 20px;
 }
 
-.icons-grid a {
+.icons-grid i {
   text-decoration: none;
   color: #000;
   margin: 0px 8px 0px 8px;
 }
 
+.icon-size {
+  font-size: 1.1em;
+}
+
 .icons-grid a:hover {
   color: grey;
+}
+
+.heart-margin {
+  margin: 0px 0px 0px 8px !important;
 }
 
 /* banner y banner grid */
@@ -126,10 +144,12 @@ nav ul a:hover {
 .banner-grid {
   background-color: white;
   margin: 0px 0px 0px 0px;
-  padding: 1% 2% 0px 2%;
+  /* padding: 1% 2% 0px 2%; */
+  padding: 30px 30px 0px 30px;
 }
 
 .image-container {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -138,6 +158,24 @@ nav ul a:hover {
   /* max-height: 350px; */
   background-color: #f0eeed;
   overflow: hidden;
+}
+
+.image-overlay-custom {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.258);
+}
+
+.image-overlay-custom:hover {
+  opacity: 1;
+}
+
+.image-container:hover {
+  transform: scale(0.99);
 }
 
 .image-inside-2 {
@@ -169,7 +207,6 @@ nav ul a:hover {
   }
 
   .inform {
-    height: 15vh !important;
     justify-content: space-evenly !important;
   }
 }
@@ -187,7 +224,9 @@ nav ul a:hover {
 
 @media screen and (max-width: 575px) {
   .inform {
-    margin: 1% 2% 1% 2% !important;
+    height: 24vh !important;
+    margin: 30px 0px 0px 0px !important;
+    /* margin: 1% 2% 1% 2% !important; */
   }
 }
 
@@ -197,7 +236,7 @@ nav ul a:hover {
 
 .inform {
   background-color: #f0eeed;
-  margin: 1% 0px 1% 0px;
+  margin: 20px 0px 0px 0px;
   display: flex;
   align-items: center;
   height: 30vh;
